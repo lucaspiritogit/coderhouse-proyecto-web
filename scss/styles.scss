@@ -1,0 +1,379 @@
+// scss de los html
+@import "productos";
+@import "ayuda";
+@import "sobreNosotros";
+@import "contacto";
+
+// elementos de la pagina
+@import "header";
+@import "footer";
+
+// variables
+$links-color: #c8e7ff;
+$carousel-fixed-width: 1000px;
+$carousel-fixed-height: $carousel-fixed-width / 1.6;
+
+main {
+  grid-area: main;
+}
+
+/* global selectors */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  /* font-family: "Capriola", sans-serif; */
+}
+
+iframe {
+  max-width: 100%;
+}
+
+i {
+  font-size: 25px;
+  color: #cddddd;
+}
+
+h1 {
+  font-family: "Capriola", sans-serif;
+}
+h2 {
+  font-family: "Capriola", sans-serif;
+}
+
+html,
+body {
+  background-color: #cddddd !important;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: $links-color;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: $links-color;
+}
+
+/* end of global selectors section  */
+
+/* main section of index*/
+
+.mainSectionSales a {
+  color: #2e2f2f;
+}
+
+.salesContainer {
+  padding: 20px;
+}
+
+.salesTitle {
+  margin-bottom: 20px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.carrouselImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.carousel-img {
+  width: $carousel-fixed-width;
+  height: $carousel-fixed-height;
+}
+
+/* end of main section */
+
+/* media queries */
+
+/* phones */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .mainHeader {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-img {
+    width: 100%;
+    height: $carousel-fixed-height / 4;
+  }
+
+  .navList__navLinks {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainHeader__navPcCart ul {
+    text-align: center;
+  }
+
+  .mainHeader__searchBarContainer {
+    margin: 10px;
+  }
+
+  .mainFooter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainHeader__searchBar:focus {
+    transform: scale(1);
+  }
+
+  .mainSectionProducts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productInfoPrice {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .productsCategories ul {
+    display: none;
+  }
+
+  .productItem {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .productInfoPrice button {
+    padding: 15px;
+  }
+
+  .productsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainSectionFaq {
+    display: flex;
+    flex-direction: column;
+
+    .clientInfoContainer {
+      width: 100%;
+    }
+  }
+
+  .paymentsInfoContainer {
+    flex-direction: column;
+  }
+
+  .deliveryInfoContainer {
+    flex-direction: column;
+  }
+
+  .cardEmployees {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .mainHeader {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-img {
+    height: $carousel-fixed-height / 2;
+  }
+
+  .navList__navLinks {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainHeader__navPcCart ul {
+    text-align: center;
+  }
+
+  .mainHeader__searchBarContainer {
+    margin: 10px;
+  }
+
+  .mainFooter {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainHeader__searchBar:focus {
+    transform: scale(1);
+  }
+
+  .mainSectionProducts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productInfoPrice {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .productsCategories ul {
+    display: none;
+  }
+
+  .productItem {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .productsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainSectionFaq {
+    display: flex;
+    flex-direction: column;
+
+    .clientInfoContainer {
+      width: 100%;
+    }
+  }
+
+  .mainSectionFaq__paymentsContainer {
+    width: 100%;
+    padding: 10px;
+  }
+  .mainSectionFaq__deliveryContainer {
+    width: 100%;
+    padding: 10px;
+  }
+  .cardEmployees {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .mainHeader {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-img {
+    height: $carousel-fixed-height / 2;
+  }
+
+  .navList__navLinks {
+    display: flex;
+  }
+  .mainHeader__navPcCart ul {
+    text-align: center;
+  }
+
+  .mainHeader__searchBarContainer {
+    margin: 10px;
+  }
+
+  .mainFooter {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainHeader__searchBar:focus {
+    transform: scale(1);
+  }
+
+  .mainSectionProducts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productInfoPrice {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .productsCategories ul {
+    display: none;
+  }
+
+  .productItem {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .productsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainSectionFaq {
+    display: flex;
+    flex-direction: column;
+
+    .clientInfoContainer {
+      width: 100%;
+    }
+  }
+  .mainSectionFaq__paymentsContainer {
+    width: 100%;
+    padding: 10px;
+  }
+  .mainSectionFaq__deliveryContainer {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cardEmployees {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* end of media queries */
+
+/* bootstrap cover styles */
+
+dl,
+ol,
+ul {
+  margin-bottom: 0;
+}
+
+ol,
+ul {
+  padding-left: 0;
+}
+
+.form-group {
+  padding: 10px;
+}
+
+.btn-primary {
+  margin-top: 5px;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

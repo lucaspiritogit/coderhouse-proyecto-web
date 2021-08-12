@@ -1,0 +1,189 @@
+/* main section faq*/
+
+.mainSectionFaq {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "paymentsContainer paymentsContainer paymentsContainer"
+    "deliveryContainer deliveryContainer deliveryContainer"
+    "clientInfoContainer clientInfoContainer clientInfoContainer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr auto;
+  place-items: center;
+  text-align: center;
+}
+
+.mainSectionFaq__title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 2.4rem;
+  grid-area: title;
+}
+
+.mainSectionFaq__deliveryContainer {
+  grid-area: deliveryContainer;
+  width: 50%;
+}
+.deliveryInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  border-bottom: 2px solid black;
+}
+
+.mainSectionFaq__paymentsContainer {
+  grid-area: paymentsContainer;
+  width: 50%;
+}
+
+.paymentsInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.paymentsInfo {
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+}
+
+.deliveryInfo {
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+}
+
+.faqImagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faqImagesContainer {
+  div {
+    margin: 15px;
+  }
+}
+
+main {
+  i {
+    font-size: 2.5rem;
+    color: black;
+  }
+  .fa-shipping-fast {
+    animation-name: vehicleAnim;
+    animation-duration: 3.7s;
+  }
+
+  .fa-exclamation-circle {
+    animation-name: alertAnim;
+    animation-duration: 3.7s;
+  }
+}
+
+.clientInfoContainer {
+  grid-area: clientInfoContainer;
+  width: 50%;
+  padding: 20px;
+}
+
+.covidInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 5px solid black;
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #61ce52;
+
+  i {
+    margin: 10px;
+  }
+}
+
+.returnPackageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 5px solid black;
+  width: 100%;
+  margin-top: 15px;
+  background-color: #e4ba83;
+
+  i {
+    margin: 10px;
+  }
+}
+
+/* end of main section faq */
+
+// alert anim
+.alertAnim {
+  animation: alertAnim linear 0.8s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+}
+
+@keyframes alertAnim {
+  0% {
+    transform: rotate(0deg) scaleX(1) scaleY(1);
+  }
+  10% {
+    transform: rotate(-3deg) scaleX(0.8) scaleY(0.8);
+  }
+  20% {
+    transform: rotate(-3deg) scaleX(0.8) scaleY(0.8);
+  }
+  30% {
+    transform: rotate(3deg) scaleX(1.2) scaleY(1.2);
+  }
+  40% {
+    transform: rotate(-3deg) scaleX(1.2) scaleY(1.2);
+  }
+  50% {
+    transform: rotate(3deg) scaleX(1.2) scaleY(1.2);
+  }
+  60% {
+    transform: rotate(-3deg) scaleX(1.2) scaleY(1.2);
+  }
+  70% {
+    transform: rotate(3deg) scaleX(1.2) scaleY(1.2);
+  }
+  80% {
+    transform: rotate(-3deg) scaleX(1.2) scaleY(1.2);
+  }
+  90% {
+    transform: rotate(3deg) scaleX(1.2) scaleY(1.2);
+  }
+  100% {
+    transform: rotate(0deg) scaleX(1.2) scaleY(1.2);
+  }
+}
+
+// truck anim
+.vehicleAnim {
+  animation: vehicleAnim ease-out 0.8s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode: forwards; /*when the spec is finished*/
+}
+
+@keyframes vehicleAnim {
+  0% {
+    opacity: 0;
+    transform: translate(-300px, 0px) skewX(-30deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(0px, 0px) skewX(-15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px) skewX(0deg);
+  }
+}

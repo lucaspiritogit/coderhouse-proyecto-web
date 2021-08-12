@@ -1,0 +1,27 @@
+/* main section about us */
+
+.mainSectionAboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cardEmployees {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+  }
+  
+  .aboutInfoContainer {
+    width: 50%;
+    margin: 10px;
+  }
+  
+  .mainSectionAboutUs h1 {
+    margin: 20px 0 10px 0;
+  }
+  /* end of main section about us */
+  
