@@ -1,87 +1,117 @@
 /* products section */
 
-
 .mainSectionProducts {
-    display: grid;
-    grid-template-areas:
-      ". title ."
-      "categories products ."
-      "categories . .";
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto auto 1fr;
+  display: grid;
+  grid-template-areas:
+    ". title ."
+    "categories products ."
+    "categories . .";
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto 1fr;
+}
+
+.productsTitle {
+  grid-area: title;
+  place-self: center;
+  margin: 40px;
+}
+
+.productsContainer {
+  grid-area: products;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
+}
+
+.productsCategories {
+  grid-area: categories;
+  place-self: start;
+  border-bottom: 5px solid black;
+  padding: 15px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.productsCategories ul li {
+  margin: 15px;
+}
+
+.productsCategories li {
+  color: black;
+}
+
+.productItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 3px 3px 3px #888888;
+  width: 800px;
+  margin: 15px;
+}
+
+.productInfoPrice {
+  padding: 15px;
+}
+
+.productInfoPrice h1 {
+  margin-bottom: 25px;
+}
+
+.productInfoPrice h3 {
+  margin: 10px;
+  font-size: 1.5em;
+  color: #529445;
+}
+
+.productInfoPrice button {
+  padding: 20px;
+  background: transparent;
+  color: #d8bbff;
+  outline: none;
+  border: none;
+  background-color: #2e2f2f;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 2px 3px #888888;
+}
+
+.productInfoPrice button:hover {
+  transform: scale(1.1);
+}
+
+.productInfoPrice button:active {
+  color: black;
+  background-color: rgb(105, 190, 145);
+}
+
+.prodImg {
+  width: 150px;
+  height: 150px;
+}
+
+.productRecommendations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  p {
+    font-size: 1.4rem;
+    color: green;
   }
-  
-  .productsTitle {
-    grid-area: title;
-    place-self: center;
-    margin: 40px;
+
+  .recommendedEmoji {
+    font-size: 2.2rem;
   }
-  
-  .productsContainer {
-    grid-area: products;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
-  }
-  
-  .productsCategories {
-    grid-area: categories;
-    place-self: start;
-    border-bottom: 5px solid black;
-    padding: 15px;
-    margin: 0 auto;
-  }
-  
-  .productsCategories ul li {
-    margin: 15px;
-  }
-  
-  .productsCategories li {
-    color: black;
-  }
-  
-  .productItem {
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 3px 3px 3px #888888;
-    width: 800px;
-    margin: 15px;
-  }
-  
-  .productInfoPrice {
-    margin-left: 40px;
-    padding: 25px;
-  }
-  
-  .productInfoPrice h1 {
-    margin-bottom: 25px;
-  }
-  
-  .productInfoPrice h3 {
-    margin: 10px;
-    font-size: 1.5em;
-    color: #529445;
-  }
-  
-  .productInfoPrice button {
-    padding: 20px;
-    background: transparent;
-    color: #d8bbff;
-    outline: none;
-    border: none;
-    background-color: #2e2f2f;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    margin-top: 10px;
-    border-radius: 10px;
-  }
-  
-  .productInfoPrice button:hover {
-    color: #caffbf;
-  }
-  
-  /* end of products section */
+}
+
+/* end of products section */

@@ -1,32 +1,31 @@
 /* main section of contact */
 
 .mainSectionContact {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr 0.5fr;
-    place-items: center;
-  }
-  
-  .formItem {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formItem > * {
-    align-self: flex-start;
-    font-size: 1.2rem;
-    margin: 10px;
-  }
-  
-  .formItem label {
-    font-weight: 600;
-    padding: 10px 0;
-  }
-  
-  .mainSectionContact h1 {
-    margin: 10px 0 20px 0;
-  }
-  
-  /* end of main section contact */
-  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr;
+  place-items: center;
+}
+
+.formItem {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.formItem > * {
+  align-self: flex-start;
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.formItem label {
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.mainSectionContact h1 {
+  margin: 10px 0 20px 0;
+}
+
+/* end of main section contact */

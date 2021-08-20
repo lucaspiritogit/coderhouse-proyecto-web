@@ -1,94 +1,95 @@
 /* footer */
 
 .mainFooter {
-    grid-area: footer;
-    background: rgb(52, 55, 55);
-    background: radial-gradient(
-      circle,
-      rgba(52, 55, 55, 1) 0%,
-      rgba(5, 8, 11, 1) 100%
-    );
-    text-align: center;
-    display: grid;
-    grid-template-areas: "social location contact";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    place-items: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .mainFooter h2 {
-    color: #b6744dec;
-  }
-  
-  .mainFooter__socialImages {
-    display: grid;
-    grid-template-areas: "socialLinks";
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr;
-    grid-area: social;
-  }
-  
-  .mainFooter__socialImages img {
-    margin: 0 20px 20px 20px;
-    transition: all 0.3s;
-  }
-  
-  // map
-  $social-links-images: (
-    "facebook": #3b5998,
-    "twitter": #1da1f2,
-    "instagram": #833ab4,
+  grid-area: footer;
+  background: rgb(52, 55, 55);
+  background: radial-gradient(
+    circle,
+    rgba(52, 55, 55, 1) 0%,
+    rgba(5, 8, 11, 1) 100%
   );
-  
-  // each
-  @each $social-link-image, $color in $social-links-images {
-    .socialLinkImage--#{$social-link-image} {
-      background-color: $color;
-      padding: 15px;
-      border-radius: 5px;
-      height: 70px;
-      width: 70px;
-    }
-  }
-  
-  .mainFooter__socialImages {
-    img:hover {
-      transform: scale(1.1);
-    }
-  }
-  
-  .mainFooter__socialImages h2 {
-    padding: 10px;
-  }
-  
-  .mainFooter__contactNav {
-    margin: 10px 0 10px 0;
+  text-align: center;
+  display: grid;
+  grid-template-areas: "social location contact";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  place-items: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+
+.mainFooter h2 {
+  color: #b6744dec;
+}
+
+.mainFooter__socialImages {
+  display: grid;
+  grid-template-areas: "socialLinks";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr;
+  grid-area: social;
+}
+
+.mainFooter__socialImages img {
+  margin: 0 20px 20px 20px;
+  transition: all 0.3s;
+}
+
+// map
+$social-links-images: (
+  "facebook": #3b5998,
+  "twitter": #1da1f2,
+  "instagram": #833ab4,
+);
+
+// each
+@each $social-link-image, $color in $social-links-images {
+  .socialLinkImage--#{$social-link-image} {
+    background-color: $color;
     padding: 15px;
-    grid-area: contact;
-  
-    h2 {
-      margin: 10px;
-    }
+    border-radius: 5px;
+    height: 70px;
+    width: 70px;
   }
-  
-  .mainFooter__contactNav li {
-    padding: 5px;
+}
+
+.mainFooter__socialImages {
+  img:hover {
+    transform: scale(1.1);
   }
-  
-  .findUs {
-    margin: 15px 0 25px 0;
-    grid-area: location;
+}
+
+.mainFooter__socialImages h2 {
+  padding: 10px;
+}
+
+.mainFooter__contactNav {
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  grid-area: contact;
+
+  h2 {
+    margin: 10px;
   }
-  
-  .findUs iframe {
-    width: 80%;
-    height: 160px;
-  }
-  
-  .findUs h2 {
-    padding: 20px;
-  }
-  
-  /* end of footer section */
+}
+
+.mainFooter__contactNav li {
+  padding: 5px;
+}
+
+.findUs {
+  margin: 15px 0 25px 0;
+  grid-area: location;
+}
+
+.findUs iframe {
+  width: 80%;
+  height: 160px;
+}
+
+.findUs h2 {
+  padding: 20px;
+}
+
+/* end of footer section */

@@ -1,7 +1,7 @@
 {
-  "name": "proyecto-desarrollo-web-lucas-pirito",
+  "name": "hoot-componentes-desarrollo-web-lucas-pirito",
   "version": "1.0.0",
-  "description": "",
+  "description": "Venta de componentes para PC",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
