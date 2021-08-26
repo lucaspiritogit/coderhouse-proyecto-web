@@ -35,24 +35,24 @@ main {
     bottom: 5px;
     color: #25d366;
     font-weight: 600;
-    text-shadow: 2px 0 0 #2e2f2f, -2px 0 0 #2e2f2f, 0 2px 0 #2e2f2f, 0 -2px 0 #2e2f2f, 1px 1px #2e2f2f, -1px -1px 0 #2e2f2f, 1px -1px 0 #2e2f2f, -1px 1px 0 #2e2f2f;
-    
+    text-shadow: 2px 0 0 #2e2f2f, -2px 0 0 #2e2f2f, 0 2px 0 #2e2f2f,
+      0 -2px 0 #2e2f2f, 1px 1px #2e2f2f, -1px -1px 0 #2e2f2f, 1px -1px 0 #2e2f2f,
+      -1px 1px 0 #2e2f2f;
   }
 
-  .whatsappStickyImg { 
-  position: fixed;
-  width: 55px;
-  height: 55px;
-  bottom: 50px;
-  background-color: #25d366;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  right: 55px;
-  z-index: 100;
-  cursor: pointer;
+  .whatsappStickyImg {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    right: 55px;
+    z-index: 100;
+    cursor: pointer;
   }
-
 }
 
 iframe {
@@ -214,6 +214,15 @@ a:hover {
   .cardEmployees {
     display: flex;
     flex-direction: column;
+  }
+
+  .mainSectionContact {
+    display: flex;
+    flex-direction: column;
+
+    .bothContactContainer {
+      flex-direction: column;
+    }
   }
 }
 

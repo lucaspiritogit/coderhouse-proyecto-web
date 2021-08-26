@@ -39,7 +39,8 @@
   padding: 20px;
   box-shadow: 3px 3px 3px #888888;
   width: 800px;
-  margin: 15px; }
+  margin: 15px;
+  background-color: #fafafa9f; }
 
 .productInfoPrice {
   padding: 15px; }
@@ -261,9 +262,44 @@ main .fa-exclamation-circle {
 /* main section of contact */
 .mainSectionContact {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto auto;
   grid-template-rows: 0.3fr 1fr;
-  place-items: center; }
+  place-items: center;
+  grid-template-areas: "title title" "bothContactContainer bothContactContainer"; }
+  .mainSectionContact .bothContactContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: bothContactContainer; }
+  .mainSectionContact textarea {
+    resize: none; }
+  .mainSectionContact .mainSectionContact__contactTitle {
+    grid-area: title; }
+  .mainSectionContact .mainSectionContact__contactForm {
+    background-color: #7768ae;
+    color: #c8e7ff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px; }
+  .mainSectionContact .mainSectionContact__contactInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .mainSectionContact .mainSectionContact__contactInfoContainer .contactInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin: 10px; }
+      .mainSectionContact .mainSectionContact__contactInfoContainer .contactInfo i {
+        padding: 10px; }
+    .mainSectionContact .mainSectionContact__contactInfoContainer .contactInfoMail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
 
 .formItem {
   margin: 0 auto;
@@ -345,9 +381,6 @@ main .fa-exclamation-circle {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-.mainHeader__searchBar {
-  width: 600px; }
 
 .navList li {
   display: inline-block;
@@ -433,21 +466,21 @@ main .fa-exclamation-circle {
   padding: 15px;
   border-radius: 5px;
   height: 70px;
-  width: 70px; }
+  width: 75px; }
 
 .socialLinkImage--twitter {
   background-color: #1da1f2;
   padding: 15px;
   border-radius: 5px;
   height: 70px;
-  width: 70px; }
+  width: 75px; }
 
 .socialLinkImage--instagram {
   background-color: #833ab4;
   padding: 15px;
   border-radius: 5px;
   height: 70px;
-  width: 70px; }
+  width: 75px; }
 
 .mainFooter__socialImages img:hover {
   transform: scale(1.1); }
@@ -456,7 +489,6 @@ main .fa-exclamation-circle {
   padding: 10px; }
 
 .mainFooter__contactNav {
-  margin: 10px 0 10px 0;
   padding: 15px;
   grid-area: contact; }
   .mainFooter__contactNav h2 {
@@ -474,7 +506,7 @@ main .fa-exclamation-circle {
   height: 160px; }
 
 .findUs h2 {
-  padding: 20px; }
+  padding: 5px; }
 
 /* end of footer section */
 main {
@@ -496,7 +528,7 @@ main {
     bottom: 5px;
     color: #25d366;
     font-weight: 600;
-    text-shadow: 2px 0 0 #2e2f2f, -2px 0 0 #2e2f2f, 0 2px 0 #2e2f2f, 0 -2px 0 #2e2f2f, 1px 1px #2e2f2f, -1px -1px 0 #2e2f2f, 1px -1px 0 #2e2f2f, -1px 1px 0 #2e2f2f; }
+    text-shadow: 2px 0 0 #2e2f2f, -2px 0 0 #2e2f2f, 0 2px 0 #2e2f2f, 0 -2px 0 #2e2f2f, 1px 1px #2e2f2f, -1px -1px 0 #2e2f2f, 1px -1px 0 #2e2f2f, -1px 1px 0 #2e2f2f; }
   .whatsappContainer .whatsappStickyImg {
     position: fixed;
     width: 55px;
@@ -618,7 +650,12 @@ a:hover {
     flex-direction: column; }
   .cardEmployees {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column; }
+  .mainSectionContact {
+    display: flex;
+    flex-direction: column; }
+    .mainSectionContact .bothContactContainer {
+      flex-direction: column; } }
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
   .mainHeader {
