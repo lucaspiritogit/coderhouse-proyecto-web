@@ -321,34 +321,47 @@ main .fa-exclamation-circle {
 /* end of main section contact */
 /* header */
 .navList {
-  text-align: center; }
+  grid-area: nav; }
 
 .navList__navLinks {
   background-color: #7768ae;
-  margin-top: 10px;
   padding: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center; }
+  .navList__navLinks li {
+    border-bottom: 1px solid white; }
+  .navList__navLinks li:first-child {
+    padding: 5px 5px; }
+  .navList__navLinks div:nth-child(2) {
+    padding: 5px 5px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .navList__navLinks li:nth-child(3) {
+    padding: 5px 5px; }
+  .navList__navLinks :hover {
+    background-color: #2e2f2f; }
 
 .productsLink {
   position: relative;
-  display: inline-block; }
-
-.navList__productsSubMenu {
-  display: none;
-  /* hide submenu */
-  position: absolute;
-  background-color: #7768ae;
-  height: auto;
-  margin-top: 20px;
-  right: 5px;
-  left: 5px;
-  z-index: 100; }
-
-.navList__productsSubMenu li {
-  text-align: center;
-  font-size: 16px; }
+  width: 198px;
+  text-align: center; }
+  .productsLink .navList__productsSubMenu {
+    display: none;
+    /* hide submenu */
+    position: absolute;
+    background-color: #7768ae;
+    height: auto;
+    left: 0px;
+    top: 49px;
+    z-index: 100; }
+    .productsLink .navList__productsSubMenu :hover {
+      background-color: #2e2f2f; }
+    .productsLink .navList__productsSubMenu a {
+      text-align: center;
+      width: 100%; }
+      .productsLink .navList__productsSubMenu a li {
+        padding: 10px; }
 
 .productsLink:hover .navList__productsSubMenu {
   display: block; }
@@ -381,15 +394,6 @@ main .fa-exclamation-circle {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-.navList li {
-  display: inline-block;
-  margin: 10px 25px 10px 25px;
-  padding: 10px;
-  border-bottom: 1px solid white; }
-
-.navList {
-  grid-area: nav; }
 
 .mainHeader__navPcCart {
   display: flex;
@@ -445,7 +449,7 @@ main .fa-exclamation-circle {
   place-items: center;
   align-items: center;
   width: 100%;
-  height: 300px; }
+  height: 295px; }
 
 .mainFooter h2 {
   color: #b6744dec; }
@@ -509,9 +513,6 @@ main .fa-exclamation-circle {
   padding: 5px; }
 
 /* end of footer section */
-main {
-  grid-area: main; }
-
 /* global selectors */
 * {
   margin: 0;
@@ -520,30 +521,30 @@ main {
   box-sizing: border-box;
   /* font-family: "Capriola", sans-serif; */ }
 
+p {
+  font-size: 1.1em; }
+
 .whatsappContainer {
   position: relative; }
-  .whatsappContainer h4 {
-    position: fixed;
-    right: 25px;
-    bottom: 5px;
-    color: #25d366;
-    font-weight: 600;
-    text-shadow: 2px 0 0 #2e2f2f, -2px 0 0 #2e2f2f, 0 2px 0 #2e2f2f, 0 -2px 0 #2e2f2f, 1px 1px #2e2f2f, -1px -1px 0 #2e2f2f, 1px -1px 0 #2e2f2f, -1px 1px 0 #2e2f2f; }
   .whatsappContainer .whatsappStickyImg {
+    transition: all 0.3s;
     position: fixed;
     width: 55px;
     height: 55px;
-    bottom: 50px;
     background-color: #25d366;
     border-radius: 50%;
     text-align: center;
     font-size: 30px;
-    right: 55px;
+    bottom: 20px;
+    right: 20px;
     z-index: 100;
     cursor: pointer; }
+  .whatsappContainer :hover {
+    transform: scale(1.1); }
 
 iframe {
-  max-width: 100%; }
+  max-width: 100%;
+  border-radius: 10px; }
 
 i {
   font-size: 25px;
@@ -610,7 +611,9 @@ a:hover {
     height: 156.25px; }
   .navList__navLinks {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
   .mainHeader__navPcCart ul {
     text-align: center; }
   .mainHeader__searchBarContainer {
@@ -633,7 +636,7 @@ a:hover {
   .productItem {
     display: flex;
     flex-direction: column;
-    width: 100%; }
+    width: 90%; }
   .productInfoPrice button {
     padding: 15px; }
   .productsContainer {
@@ -663,9 +666,10 @@ a:hover {
     flex-direction: column; }
   .carousel-img {
     height: 312.5px; }
-  .navList__navLinks {
+  .navList {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: center; }
   .mainHeader__navPcCart ul {
     text-align: center; }
   .mainHeader__searchBarContainer {
