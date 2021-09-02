@@ -714,7 +714,7 @@ a:hover {
     display: flex;
     flex-direction: column; } }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .mainHeader {
     display: flex;
     flex-direction: column; }
@@ -766,6 +766,55 @@ a:hover {
     display: flex;
     flex-direction: column; } }
 
+@media screen and (max-width: 1024px) {
+  .mainHeader {
+    display: flex;
+    flex-direction: column; }
+  .carousel-img {
+    height: 312.5px; }
+  .navList__navLinks {
+    display: flex; }
+  .mainHeader__navPcCart ul {
+    text-align: center; }
+  .mainHeader__searchBarContainer {
+    margin: 10px; }
+  .mainFooter {
+    display: flex;
+    flex-direction: column;
+    height: auto; }
+  .mainHeader__searchBar:focus {
+    transform: scale(1); }
+  .mainSectionProducts {
+    display: flex;
+    flex-direction: column; }
+  .productInfoPrice {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center; }
+  .productsCategories ul {
+    display: none; }
+  .productItem {
+    margin: 20px;
+    display: flex;
+    width: 70%;
+    max-height: 100%; }
+  .productsContainer {
+    place-items: center; }
+  .mainSectionFaq {
+    display: flex;
+    flex-direction: column; }
+    .mainSectionFaq .clientInfoContainer {
+      width: 100%; }
+  .mainSectionFaq__paymentsContainer {
+    width: 100%;
+    padding: 10px; }
+  .mainSectionFaq__deliveryContainer {
+    width: 100%;
+    padding: 10px; }
+  .cardEmployees {
+    display: flex;
+    flex-direction: column; } }
+
 /* end of media queries */
 /* bootstrap cover styles */
 dl,
@@ -781,7 +830,14 @@ ul {
   padding: 10px; }
 
 .btn-primary {
-  margin-top: 5px; }
+  margin-top: 5px;
+  background-color: #2e2f2f;
+  border: none;
+  width: 100%; }
+
+.btn-primary:hover {
+  background-color: #7fdd76;
+  color: #2e2f2f; }
 
 .card {
   margin-top: 10px;
