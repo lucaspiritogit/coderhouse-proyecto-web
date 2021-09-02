@@ -11,7 +11,7 @@
 // variables
 $links-color: #c8e7ff;
 $carousel-fixed-width: 1000px;
-$carousel-fixed-height: $carousel-fixed-width / 1.6;
+$carousel-fixed-height: $carousel-fixed-width / 1.8;
 
 /* global selectors */
 * {
@@ -218,6 +218,11 @@ a:hover {
     .bothContactContainer {
       flex-direction: column;
     }
+  }
+
+  .mainFooter__socialImagesContainer {
+    display: flex;
+    flex-direction: column;
   }
 }
 
